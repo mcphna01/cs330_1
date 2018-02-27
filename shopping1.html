@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Shopping List</title>
+</head>
+<style>
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+      display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+</style>
+<body id="body">
+  <input type="text" placeholder="Search.." id="search">
+
+<div id="entryinput"><h1>Data Entry</h1>
+  <div>Name
+  <input type="text" placeholder="item name.." id="item">
+  </div>
+  
+  <div class="dropdown">
+  	<button type="button" onclick="dropquantity()" class="dropbtn">Quantity</button>
+  	<div id="quantdrop" class="dropdown-content">
+  		<p>1</p>
+  		<p>2</p>
+  		<p>3</p>
+  	</div>
+  </div>
+<br>
+  <div class="dropdown">Store
+
+
+
+  </div>
+<br>
+  <div class="dropdown">Section
+
+
+  </div>
+<br>
+  <div>Price
+  <input type="number" placeholder="price.." id="price">
+
+
+  </div>
+<br>
+  <div class="dropdown">
+  <button type="button" onclick="droppriority()" class="dropbtn">Priority</button>
+  	<div id="prioritydrop" class="dropdown-content">
+  		<p>1</p>
+  		<p>2</p>
+  		<p>3</p>
+  	</div>
+
+  </div>
+
+  <div><button type="button" id="add" onclick="add()">Add</button></div>
+
+</div>
+
+<h2 id="test">List</h2>
+
+<script src="shopping1.js" type="text/javascript"></script>
+</body>
+</html>
