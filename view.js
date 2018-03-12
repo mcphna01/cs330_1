@@ -22,7 +22,7 @@ class ShoppingView {
     	cb.classList.add("form-control")
     	row.appendChild(cb)
 
-    	for (let val of ['item', 'quantity', 'store', 'section', 'price', 'priority']) {
+    	for (let val of ['item', 'quantity', 'priority', 'store', 'section', 'price']) {
     		let td=document.createElement("td")
     	    td.innerHTML=item[val]
     	    row.appendChild(td)
