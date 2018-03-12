@@ -28,7 +28,7 @@ class Subject {
 }
 
 class Item {
-	constructor(item, quantity, store, section, price, priority) {
+	constructor(item, quantity, priority, store, section, price) {
 		this.item=item
 		this.quantity=quantity
 		this.store=store
