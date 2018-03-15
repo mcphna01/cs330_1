@@ -28,5 +28,26 @@ class ShoppingView {
     	    row.appendChild(td)
     	}
     	parent.appendChild(row)
+
+        cb.onchange=function() {
+            //put line through row//
+            let del=document.createElement("del")
+            del.classList.add("form-control")
+            //row.appendChild(strike)//
+            let child_list=[]
+            for (let i=0; i<7; i++) {
+                child_list.push(row.children[i])
+            }
+            //child_list.unshift(document.createElement("del"))
+            console.log(child_list)
+            row.innerHTML=""
+            parent.appendChild(del)
+            del.appendChild(row)
+            for (let i of child_list) {
+                row.appendChild(i)
+            }
+            console.log(row)
+            console.log(parent.children)
+        }
     }
 }

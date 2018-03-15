@@ -10,7 +10,8 @@
 
     </head>
 
-    <body>
+    <body class="form-inline">
+
     <div class="form-group">
         <label for="itemname">Item Name</label>
         <input type=text class="form-control" name="itemname" id="item"/>
@@ -64,6 +65,7 @@
             <option value="Frozen Goods">Frozen Goods</option>
             <option value="Canned Goods">Canned Goods</option>
             <option value="Liquor">Liquor</option>
+            <option value="Tools">Tools</option>
         </select>
     </div>
 
@@ -77,7 +79,7 @@
     <table class="table table-bordered">
         <thead>
             <tr>
-                <th></th><th>Item</th><th>Quantity</th><th>Priority</th><th>Store</th><th>Section</th><th>Price</th>
+                <th></th><th onclick="sort()" id="titem">Item</th><th onclick="sort()" id="tquant">Quantity</th><th onclick="sort()" id="tpriority">Priority</th><th onclick="sort()" id="tstore">Store</th><th onclick="sort()" id="tsection">Section</th><th onclick="sort()" id="tprice">Price</th>
             </tr>
         </thead>
         <tbody id="shoppinglist"></tbody>
