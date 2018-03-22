@@ -37,7 +37,7 @@ class ShoppingView {
         cb.onchange=function() {
             //put line through row//
             let del=document.createElement("del")
-            del.classList.add("form-control")
+            del.classList.add("form-group")
             //row.appendChild(strike)//
             let child_list=[]
             for (let i=0; i<7; i++) {
