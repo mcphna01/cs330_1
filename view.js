@@ -22,12 +22,21 @@ class ShoppingView {
         cb.classList.add("form-control")
         row.appendChild(cb)
 
+<<<<<<< HEAD
         for (let val of ['item', 'quantity', 'priority', 'store', 'section', 'price']) {
             let td=document.createElement("td")
             td.innerHTML=item[val]
             row.appendChild(td)
         }
         parent.appendChild(row)
+=======
+    	for (let val of ['item', 'quantity', 'priority', 'store', 'section', 'price']) {
+    		let td=document.createElement("td")
+    	    td.innerHTML=item[val]
+    	    row.appendChild(td)
+    	}
+    	parent.appendChild(row)
+>>>>>>> master
 
         cb.onchange=function() {
             //put line through row//
