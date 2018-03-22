@@ -64,7 +64,7 @@ class LocalStorageSaver {
         model.subscribe(function(slist, msg) {
             self.saveAll(slist)
         })
-        let restore_list=JSON.parse(localStorage.getItem(ls_list))
+        let restore_list=JSON.parse(localStorage.getItem(this.lsname))
         for (let vals of restore_list) {
             let it=new Item(vals.item, vals.quantity, vals.priority, vals.store, vals.section, vals.price)
             model.addItem(it)
