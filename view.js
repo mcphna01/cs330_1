@@ -51,3 +51,23 @@ class ShoppingView {
         }
     }
 }
+
+class LocalStorageSaver {
+    constructor(model, lsname) {
+        this.lsname=lsname
+        let self=this
+        model.subscribe(function(slist, msg) {
+            self.saveAll(slist)
+        })
+        let restore_list=JSON.parse(localStorage.getItem(ls_list))
+        for (let vals of restore_list) {
+            let it=new Item(vals.item, vals.quantity, vals.priority, vals.store, vals.section, vals.price)
+            model.addItem(it)
+        }
+    }
+
+    saveAll(slist) {
+        let ls_list=JSON.stringify(slist.newItems)
+        localStorage.setItem(this.lsname, ls_list)
+    }
+}

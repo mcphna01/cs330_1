@@ -2,6 +2,7 @@
 
 var shoppingModel= new ShoppingList()
 var myView=new ShoppingView(shoppingModel)
+var myDB=new LocalStorageSaver(shoppingModel,"nathans_storage")
 
 function clickedon() {
 	let rowcolids=['item', 'quantity', 'priority', 'store', 'section', 'price']
