@@ -69,5 +69,6 @@ class LocalStorageSaver {
     saveAll(slist) {
         let ls_list=JSON.stringify(slist.newItems)
         localStorage.setItem(this.lsname, ls_list)
+        console.log(this.lsname)
     }
 }

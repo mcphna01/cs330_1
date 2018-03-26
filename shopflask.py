@@ -4,12 +4,19 @@ import time
 
 app=Flask(__name__)
 
-@app.route('/savelist', methods=['GET','POST'])
+@app.route('/savelist', methods=['POST'])
 def savelist():
-    return "<h1>save list<h1>"
+    it=request.json.get('item')
+    quant=request.json.get('quantity')
+    prior=request.json.get('priority')
+    sto=request.json.get('store')
+    sec=request.json.get('section')
+    pri=request.json.get('price')
+    return json.stringify({item:it, quantity:quant, priority:prior, 
+    	store:sto, section:sec, price:pri})
 
 
-@app.route('/getlist')
+@app.route('/getlist', methods=['GET'])
 def getlist():
     return "<h1>get list<h1>"
 
